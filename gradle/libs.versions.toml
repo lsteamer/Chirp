@@ -4,7 +4,8 @@ android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
 
-androidTools = "31.12.0"
+androidDesugarJdkLibs = "2.1.5"
+androidTools = "31.13.0"
 
 androidx-activity = "1.11.0"
 androidx-appcompat = "1.7.1"
@@ -24,8 +25,8 @@ projectApplicationId = "com.anjegonz.chirp"
 projectVersionName = "1.0"
 projectVersionCode = "1"
 kotlinStdlib = "2.2.20"
-runner = "1.5.2"
-core = "1.5.0"
+runner = "1.7.0"
+core = "1.7.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -43,12 +44,15 @@ kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", versio
 androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
 
+android-desugarJdkLibs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 compose-gradlePlugin = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
+convention-android-application = { id = "com.anjegonz.convention.android.application", version="unspecified"}
+
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
