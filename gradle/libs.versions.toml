@@ -58,6 +58,7 @@ androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-toolin
 [plugins]
 convention-android-application = { id = "com.anjegonz.convention.android.application", version = "unspecified" }
 convention-android-application-compose = { id = "com.anjegonz.convention.android.application.compose", version = "unspecified" }
+convention-cmp-application = { id = "com.anjegonz.convention.cmp.application", version = "unspecified" }
 
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
