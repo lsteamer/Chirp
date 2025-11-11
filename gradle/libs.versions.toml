@@ -1,13 +1,13 @@
 [versions]
 # Build tools
-agp = "8.13.0"
+agp = "8.13.1"
 composeBom = "2025.11.00"
 kotlin = "2.2.21"
 ksp = "2.2.0-2.0.2"
 google-services = "4.4.4"
 
 androidDesugarJdkLibs = "2.1.5"
-androidTools = "31.13.0"
+androidTools = "31.13.1"
 
 # Compose
 compose-hot-reload = "1.0.0-rc03"
