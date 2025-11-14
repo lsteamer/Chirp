@@ -5,7 +5,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-class CMPApplicationConventionPlugin: Plugin<Project> {
+class CmpApplicationConventionPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         with(target) {
