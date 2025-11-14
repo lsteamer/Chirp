@@ -16,6 +16,7 @@ kotlin {
                 // Add KMP dependencies here
                 implementation(projects.core.domain)
                 implementation(libs.bundles.ktor.common)
+                implementation(libs.touchlab.kermit)
             }
         }
 
