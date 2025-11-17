@@ -1,5 +1,6 @@
 package com.anjegonz.core.designsystem.components.textfields
 
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
@@ -23,15 +24,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 fun ChirpTextField(
     state: TextFieldState,
-    modifier: Modifier = Modifier,
     placeholder: String? = null,
-    title: String? = null,
-    supportingText: String? = null,
-    isError: Boolean = false,
     singleLine: Boolean = false,
-    enabled: Boolean = true,
     keyboardType: KeyboardType = KeyboardType.Text,
+    title: String? = null,
+    isError: Boolean = false,
+    supportingText: String? = null,
+    enabled: Boolean = true,
     onFocusChanged: (Boolean) -> Unit = {},
+    modifier: Modifier = Modifier,
 ) {
 
     ChirpTextFieldLayout(
@@ -53,7 +54,7 @@ fun ChirpTextField(
                     MaterialTheme.colorScheme.surface
                 } else {
                     MaterialTheme.colorScheme.extended.textPlaceholder
-                },
+                }
             ),
             keyboardOptions = KeyboardOptions(
                 keyboardType = keyboardType
