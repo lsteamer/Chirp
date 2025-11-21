@@ -30,7 +30,7 @@ fun ChirpFloatingActionButton(
 
 @Composable
 @Preview
-fun ChirpFloatingActionButtonPreview() {
+private fun ChirpFloatingActionButtonPreview() {
     ChirpTheme {
         ChirpFloatingActionButton(onClick = {}) {
             Icon(

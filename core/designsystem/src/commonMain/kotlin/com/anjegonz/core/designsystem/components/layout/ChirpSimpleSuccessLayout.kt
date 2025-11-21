@@ -73,7 +73,7 @@ fun ChirpSimpleSuccessLayout(
 @Preview(
     showBackground = true
 )
-fun ChirpSimpleSuccessLayoutPreview() {
+private fun ChirpSimpleSuccessLayoutPreview() {
     ChirpTheme() {
         ChirpSimpleSuccessLayout(
             title = "Hello world!",

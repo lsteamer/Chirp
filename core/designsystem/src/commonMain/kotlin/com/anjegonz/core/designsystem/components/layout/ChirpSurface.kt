@@ -63,7 +63,7 @@ fun ChirpSurface(
 
 @Composable
 @Preview
-fun ChirpSurfacePreview() {
+private fun ChirpSurfacePreview() {
     ChirpTheme {
         ChirpSurface(
             modifier = Modifier

@@ -85,7 +85,7 @@ fun ChirpTextField(
 @Preview(
     showBackground = true
 )
-fun ChirpTextFieldEmptyPreview() {
+private fun ChirpTextFieldEmptyPreview() {
     ChirpTheme {
         ChirpTextField(
             state = rememberTextFieldState(),
@@ -102,7 +102,7 @@ fun ChirpTextFieldEmptyPreview() {
 @Preview(
     showBackground = true
 )
-fun ChirpTextFieldFilledPreview() {
+private fun ChirpTextFieldFilledPreview() {
     ChirpTheme {
         ChirpTextField(
             state = rememberTextFieldState(
@@ -121,7 +121,7 @@ fun ChirpTextFieldFilledPreview() {
 @Preview(
     showBackground = true
 )
-fun ChirpTextFieldDisabledPreview() {
+private fun ChirpTextFieldDisabledPreview() {
     ChirpTheme {
         ChirpTextField(
             state = rememberTextFieldState(),
@@ -139,7 +139,7 @@ fun ChirpTextFieldDisabledPreview() {
 @Preview(
     showBackground = true
 )
-fun ChirpTextFieldErrorPreview() {
+private fun ChirpTextFieldErrorPreview() {
     ChirpTheme {
         ChirpTextField(
             state = rememberTextFieldState(),

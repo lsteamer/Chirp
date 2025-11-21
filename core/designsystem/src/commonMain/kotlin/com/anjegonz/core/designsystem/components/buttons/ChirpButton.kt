@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -109,7 +110,8 @@ fun ChirpButton(
         border = border
     ) {
         Box(
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
+            modifier = Modifier.padding(6.dp)
         ) {
             CircularProgressIndicator(
                 modifier = Modifier
@@ -141,7 +143,7 @@ fun ChirpButton(
 
 @Composable
 @Preview
-fun ChirpButtonPreview() {
+private fun ChirpButtonPreview() {
     ChirpTheme {
         ChirpButton(
             text = "hello world",
@@ -152,7 +154,7 @@ fun ChirpButtonPreview() {
 
 @Composable
 @Preview
-fun ChirpSecondaryButtonPreview() {
+private fun ChirpSecondaryButtonPreview() {
     ChirpTheme {
         ChirpButton(
             text = "hello world",
@@ -164,7 +166,7 @@ fun ChirpSecondaryButtonPreview() {
 
 @Composable
 @Preview
-fun ChirpPrimaryDestructiveButtonPreview() {
+private fun ChirpPrimaryDestructiveButtonPreview() {
     ChirpTheme {
         ChirpButton(
             text = "hello world",
@@ -176,7 +178,7 @@ fun ChirpPrimaryDestructiveButtonPreview() {
 
 @Composable
 @Preview
-fun ChirpSecondaryDestructiveButtonPreview() {
+private fun ChirpSecondaryDestructiveButtonPreview() {
     ChirpTheme {
         ChirpButton(
             text = "hello world",

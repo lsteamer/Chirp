@@ -85,7 +85,7 @@ fun ChirpAdaptiveResultLayout(
 
 @Composable
 @Preview
-fun ChirpAdaptiveResultLayoutPreview() {
+private fun ChirpAdaptiveResultLayoutPreview() {
     ChirpTheme {
         ChirpAdaptiveResultLayout(
             modifier = Modifier

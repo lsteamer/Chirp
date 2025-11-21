@@ -131,7 +131,7 @@ fun ChirpPasswordTextField(
 @Preview(
     showBackground = true
 )
-fun ChirpPasswordTextFieldEmptyPreview() {
+private fun ChirpPasswordTextFieldEmptyPreview() {
     ChirpTheme {
         ChirpPasswordTextField(
             state = rememberTextFieldState(),
@@ -150,7 +150,7 @@ fun ChirpPasswordTextFieldEmptyPreview() {
 @Preview(
     showBackground = true
 )
-fun ChirpPasswordTextFieldFilledPreview() {
+private fun ChirpPasswordTextFieldFilledPreview() {
     ChirpTheme {
         ChirpPasswordTextField(
             state = rememberTextFieldState("password123"),
@@ -169,7 +169,7 @@ fun ChirpPasswordTextFieldFilledPreview() {
 @Preview(
     showBackground = true
 )
-fun ChirpPasswordTextFieldErrorPreview() {
+private fun ChirpPasswordTextFieldErrorPreview() {
     ChirpTheme {
         ChirpPasswordTextField(
             state = rememberTextFieldState("password123"),
