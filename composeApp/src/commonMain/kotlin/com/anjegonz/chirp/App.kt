@@ -10,6 +10,10 @@ import com.anjegonz.core.designsystem.theme.ChirpTheme
 @Preview
 fun App() {
     ChirpTheme {
-        RegisterRoot()
+        RegisterRoot(
+            onRegisterSuccess = {
+
+            }
+        )
     }
 }
