@@ -50,7 +50,7 @@ class RegisterViewModel(
 
     fun onAction(action: RegisterAction) {
         when (action) {
-            RegisterAction.OnLoginClick -> validateFormInputs()
+            RegisterAction.OnLoginClick -> Unit
             RegisterAction.OnRegisterClick -> register()
             RegisterAction.OnTogglePasswordVisibilityClick -> {
                 _state.update { it.copy(
