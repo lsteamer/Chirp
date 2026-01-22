@@ -50,7 +50,7 @@ fun ChirpTextField(
             } else TextFieldLineLimits.Default,
             textStyle = MaterialTheme.typography.bodyMedium.copy(
                 color = if (enabled) {
-                    MaterialTheme.colorScheme.surface
+                    MaterialTheme.colorScheme.onSurface
                 } else {
                     MaterialTheme.colorScheme.extended.textPlaceholder
                 }

@@ -10,7 +10,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import chirp.feature.auth.presentation.generated.resources.Res
 import chirp.feature.auth.presentation.generated.resources.email
 import chirp.feature.auth.presentation.generated.resources.email_placeholder
@@ -33,10 +32,11 @@ import com.anjegonz.core.designsystem.theme.ChirpTheme
 import com.anjegonz.core.presentation.util.ObserveAsEvents
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun RegisterRoot(
-    viewModel: RegisterViewModel = viewModel(),
+    viewModel: RegisterViewModel = koinViewModel<RegisterViewModel>(),
     onRegisterSuccess: (String) -> Unit,
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -78,7 +78,7 @@ fun RegisterScreen(
                 supportingText = state.usernameError?.asString()
                     ?: stringResource(Res.string.username_hint),
                 isError = state.usernameError != null,
-                onFocusChanged = { isFocused ->
+                onFocusChanged = {
                     onAction(RegisterAction.OnInputTextFocusGain)
                 }
             )
@@ -89,7 +89,7 @@ fun RegisterScreen(
                 title = stringResource(Res.string.email),
                 supportingText = state.emailError?.asString(),
                 isError = state.emailError != null,
-                onFocusChanged = { isFocused ->
+                onFocusChanged = {
                     onAction(RegisterAction.OnInputTextFocusGain)
                 }
             )
@@ -107,7 +107,7 @@ fun RegisterScreen(
                     onAction(RegisterAction.OnTogglePasswordVisibilityClick)
                 },
                 onFocusChanged = { isFocused ->
-                    onAction(RegisterAction.OnInputTextFocusGain)
+                    onAction(RegisterAction.OnInputPasswordTextFocusGain)
                 }
             )
 

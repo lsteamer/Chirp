@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.plcoding.convention.buildlogic"
+group = "com.anjegonz.convention.buildlogic"
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
