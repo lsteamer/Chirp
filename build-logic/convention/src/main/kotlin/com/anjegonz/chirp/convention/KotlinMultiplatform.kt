@@ -15,6 +15,7 @@ internal fun Project.configureKotlinMultiplatform() {
 
     extensions.configure<KotlinMultiplatformExtension> {
         listOf(
+            iosX64(),
             iosArm64(),
             iosSimulatorArm64()
         ).forEach { iosTarget ->
