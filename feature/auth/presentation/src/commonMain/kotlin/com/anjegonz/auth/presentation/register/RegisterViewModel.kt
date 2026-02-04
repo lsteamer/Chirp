@@ -24,7 +24,6 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
@@ -65,9 +64,6 @@ class RegisterViewModel(
     private val isPasswordValidFlow = snapshotFlow { state.value.passwordTextState.text.toString() }
         .map { password -> PasswordValidator.validate(password).isValidPassword }
         .distinctUntilChanged()
-        .onEach {
-            highlightPasswordHint()
-        }
 
     private val isRegisteringFlow = state
         .map { it.isRegistering }
@@ -89,6 +85,9 @@ class RegisterViewModel(
                     isPasswordValid = isPasswordValid,
                     canRegister = !isRegistering && allValid
                 )
+            }
+            if (isPasswordValid) {
+                highlightPasswordHint()
             }
         }.launchIn(viewModelScope)
     }
@@ -171,7 +170,7 @@ class RegisterViewModel(
     }
 
     private fun highlightPasswordHint() {
-        val currentState = state.value
+        val currentState = _state.value
         if (currentState.passwordTextState.text.toString().isEmpty()) {
             return
         }
@@ -188,6 +187,7 @@ class RegisterViewModel(
         }
     }
 
+    //Likely redundant.
     private fun validateFormInputs(): Boolean {
 
         clearAllTextFieldErrors()
